@@ -25,10 +25,12 @@ export default function Dashboard() {
     return (
         <>
             <Card>
-                <Card.Body>
+                <Card.Body style={{width: '300px'}}>
                     <h2>Profile</h2>
+                    <br/>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <strong>Email:</strong> {currentUser.email}
+                    <p/>
                     <Link to="/update-profile" >Update Profile</Link>
                 </Card.Body>
 

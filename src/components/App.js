@@ -13,7 +13,7 @@ import UpdateProfile from './UpdateProfile'
 function App() {
   return (
     <Container>
-      <div>
+      <div class="divSign">
         <Router>
           <AuthProvider>
             <Switch>

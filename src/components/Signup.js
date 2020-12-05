@@ -33,7 +33,7 @@ export default function Signup() {
     return (
         <>
             <Card>
-                <Card.Body>
+                <Card.Body style={{width: '300px'}}>
                     <h2>Sign Up</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
@@ -56,6 +56,7 @@ export default function Signup() {
                 </Card.Body>
             </Card>
             <div>
+                <p/>
                 Already have an account? <Link to="/login">Log In</Link>
             </div>
         </>

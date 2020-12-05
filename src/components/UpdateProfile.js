@@ -41,8 +41,9 @@ export default function UpdateProfile() {
     return (
         <>
             <Card>
-                <Card.Body>
+                <Card.Body style={{width: '300px'}}>
                     <h2>Update Profile</h2>
+                    <p/>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
@@ -64,6 +65,7 @@ export default function UpdateProfile() {
                 </Card.Body>
             </Card>
             <div>
+                <p/>
                 <Link to="/">Cancel</Link>
             </div>
         </>

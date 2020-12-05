@@ -28,7 +28,7 @@ export default function Login() {
     return (
         <>
             <Card>
-                <Card.Body>
+                <Card.Body style={{width: '300px'}}>
                     <h2>Log In</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
@@ -45,11 +45,13 @@ export default function Login() {
                         </Button>
                     </Form>
                     <div>
+                        <p/>
                         <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
                 </Card.Body>
             </Card>
             <div>
+                <p/>
                 Need an account? <Link to="/signup">Sign Up</Link>
             </div>
         </>
