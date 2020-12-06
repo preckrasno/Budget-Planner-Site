@@ -25,17 +25,17 @@ export default function Dashboard() {
     return (
         <>
             <Card>
-                <Card.Body style={{width: '300px'}}>
-                    <h2>Profile</h2>
-                    <br/>
+                <Card.Body>
+                    <h2 className="text-center mb-4">Profile</h2>
+                    <br />
                     {error && <Alert variant="danger">{error}</Alert>}
                     <strong>Email:</strong> {currentUser.email}
-                    <p/>
-                    <Link to="/update-profile" >Update Profile</Link>
+                    <p />
+                    <Link to="/update-profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
                 </Card.Body>
 
             </Card>
-            <div>
+            <div className="w-100 text-center mt-2">
                 <Button variant="link" onClick={handleLogout}>Log Out</Button>
             </div>
         </>
