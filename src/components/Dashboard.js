@@ -1,13 +1,13 @@
 import React from 'react'
 import NavBar from './pageElements/NavBar'
-import { useAuth } from '../contexts/AuthContext'
+import InputUserWalletTransaction from './pageElements/InputUserWalletTransaction'
 
 export default function Dashboard() {
     
-    const { currentUser } = useAuth()
     return (
-        <div>
+        <>
         <NavBar/>
-        </div>
+        <InputUserWalletTransaction/>
+        </>
     )
 }
