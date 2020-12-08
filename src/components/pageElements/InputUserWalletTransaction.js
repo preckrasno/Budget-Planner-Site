@@ -6,29 +6,30 @@ import "firebase/database"
 
 export default function InputUserWalletTransaction() {
     const { currentUser } = useAuth()
+    console.log(`currentUser = ${JSON.stringify(currentUser)}`)
+    console.log(`currentUser.email = ${JSON.stringify(currentUser.email)}`)
     const numberRef = useRef()
     const operationTypeRef = useRef()
 
     async function sendUserTransactionInfo (e) {
         e.preventDefault()
 
-        const todoRef = app.database().ref('Todo')
-        console.log(todoRef)
+        
+    console.log(`currentUser = ${JSON.stringify(currentUser)}`)
+    console.log(`currentUser.email = ${JSON.stringify(currentUser.email)}`)
+
+        const todoRef = app.database().ref(currentUser.uid)
 
         const todo = {
-            "123" : "321",
-            complete: "123"
+            email : currentUser.email.toString(),
+            userTransactionValue : numberRef.current.value,
+            userTransactionType : operationTypeRef.current.value
         }
 
         todoRef.push(todo)
-        console.log(todoRef)
         
-
     }
 
-
-
-    
     return (
         <div 
         className="d-flex align-items-center justify-content-center"
